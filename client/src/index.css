@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+#mainColumn {
+  position: absolute;
+  width: 320px;
+  height: 360px;
+  top: calc(50% - 180px);
+  left: calc(50% - 160px);
+}
+
+#mainForm {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 15px;
+  background: rgba(50, 50, 200, 0.5);
+}
+
+#mainForm label {
+  color: white;
+}
+
+#submit {
+  width: 40%;
+  margin-left: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  background: white;
+  border: hidden;
+}
