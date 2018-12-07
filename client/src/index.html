@@ -4,57 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script type="text/javascript">
-
-    var onSubmit = token => {
-      document.getElementById("userAgentInput").setAttribute("value", navigator.userAgent);
-      const form = document.getElementById("mainForm");
-      
-      const data = Array.from(form.elements).map(i => {
-        const name = i.getAttribute("name");
-        const { value } = i;
-        return {
-          name,
-          value
-        };
-      });
-
-      fetch("https://3tp3o1t910.execute-api.us-west-2.amazonaws.com/dev", {
-        method: "POST",
-        mode: "cors",
-        cache: "no-cache",
-        body: JSON.stringify(data)
-      })
-        .then(res => res.json())
-        .then(json => console.log(json))
-        .catch(err => console.log(err));
-    };
-
-    var onLoad = () => {
-      grecaptcha.render('submit', {
-        "sitekey": "6LeqPX8UAAAAACJzMIFOox9uxVOMhMGDYRZK_RoV",
-        "callback": onSubmit
-      });
-    };
-
-  </script>
+  <script src="./index.js"></script>
   <title>Compound Test</title>
 </head>
 <body>
   <div id="mainColumn">
-    <!-- https://3tp3o1t910.execute-api.us-west-2.amazonaws.com/dev -->
     <form 
       id="mainForm" 
       action="?"
       method="POST"
     >
+      <label for="firstName">First Name: </label>
+      <input type="text" name="firstName" id="firstName" required />
+      <br>
+      <label for="lastName">Last Name: </label>
+      <input type="text" name="lastName" id="lastName" required />
+      <br>
       <label for="email">Email: </label>
-      <input type="email" name="email" id="emailInput"/>
+      <input type="email" name="emailAddress" id="email" required />
       <br>
-      <label for="password">Password: </label>
-      <input type="password" name="password" id="passwordInput"/>
-      <br>
-      <input type="hidden" name="userAgent" id="userAgentInput"/>
       <input type="submit" id="submit"/>
     </form>
   </div>
