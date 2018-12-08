@@ -21,7 +21,13 @@
       <input type="text" name="lastName" id="lastName" required />
       <br>
       <label for="email">Email: </label>
-      <input type="email" name="emailAddress" id="email" required />
+      <input 
+        type="email"
+        name="emailAddress"
+        id="email"
+        required
+        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        />
       <br>
       <input type="submit" id="submit"/>
     </form>

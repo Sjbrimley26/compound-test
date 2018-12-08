@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: monospace;
 }
 
 body, html {
@@ -12,10 +13,10 @@ body, html {
 
 #mainColumn {
   position: absolute;
-  width: 320px;
-  height: 360px;
-  top: calc(50% - 180px);
-  left: calc(50% - 160px);
+  width: 280px;
+  height: 280px;
+  top: calc(50% - 140px);
+  left: calc(50% - 140px);
 }
 
 #mainForm {
@@ -24,25 +25,30 @@ body, html {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  padding: 20px;
+  padding: 25px;
   justify-content: center;
   border: hidden;
   box-shadow: 0 0 50px white;
   border-radius: 15px;
-  background: rgba(50, 50, 200, 1);
+  background: rgb(10, 10, 70);
 }
 
 #mainForm label {
   color: white;
+  font-size: 1.4em;
 }
 
 #submit {
   width: 40%;
   margin-left: 60%;
-  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 6px;
   border-radius: 10px;
   background: white;
   border: hidden;
+  font-size: 2.3em;
+  font-weight: 700;
+  font-variant: all-small-caps;
 }
 
 .popup {
@@ -53,8 +59,15 @@ body, html {
   height: 60px;
   z-index: 5;
   top: -60px;
-  font-size: 1.2em;
   font-weight: 700;
+  font-size: 1.8em;
+  font-variant: small-caps;
+}
+
+.popup p {
+  height: 30px;
+  margin: 0;
+  margin-top: 15px;
 }
 
 .popup.popup--error {
